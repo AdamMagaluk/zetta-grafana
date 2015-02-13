@@ -230,6 +230,26 @@
           "links": []
         }
       ]
+    },
+    {
+      "title": "New row",
+      "height": "250px",
+      "editable": true,
+      "collapse": false,
+      "panels": [
+        {
+          "title": "Example API Call",
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "text",
+          "id": 4,
+          "mode": "markdown",
+          "content": "GET /db/test-db/series\n\n q=select device, mean(value) from \"devicedata.microphone.volume\" where time > now() - 5m group by time(10s), device fill(0) order asc'\n\nReturns\n [\n  {\n    \"name\": \"devicedata.microphone.volume\",\n    \"columns\": [\n      \"time\",\n      \"mean\",\n      \"device\"\n    ],\n    \"points\": [\n      [\n        1423843470000,\n        1.11776,\n        \"bc51de3e-cf69-4285-9ca8-f1a046930dd7\"\n      ], ...\n     ]\n    }\n   ]\n ",
+          "style": {},
+          "links": []
+        }
+      ]
     }
   ],
   "nav": [
